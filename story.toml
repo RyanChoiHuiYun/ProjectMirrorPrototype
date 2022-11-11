@@ -1,0 +1,200 @@
+title = "Look Into the Mirror"
+titleScreen = "https://cdn.glitch.me/7200b7bc-64ac-41b1-af90-81f45e8612f9%2FKagamiTItle.jpg?v=1638766461835"
+choices = ["Read the chapter", "Credit"]
+targets = ["introduction", "credit"]
+titleMusic = "https://cdn.glitch.me/7200b7bc-64ac-41b1-af90-81f45e8612f9%2Ftitle1.mp3?v=1638613084031"
+
+
+[storylets.introduction]
+name = "Introduction"
+description = "By the time I reach my flat, the sky has turned dark, but fluttering with glimpses of neon lights. It feels so long since
+                I last saw a sky full of stars. The year is 2051, I keep reminding myself that. The city of Tokyo is no longer the way 
+                it used to be, no longer a vivid city. In fact, according to the latest database, Tokyo is now called The Sleepless City
+                for some unknown reasons."
+music = "https://cdn.glitch.me/7200b7bc-64ac-41b1-af90-81f45e8612f9%2Fbg1.mp3?v=1638614433212"
+volume = 0.5
+                
+choices = ["Prepare dinner", "Rest"]
+targets = ["dinner", "rest"]
+
+
+[storylets.dinner]
+name = "Prepare Dinner"
+description = ["It has been a long day from school, I should get some dinner. I take a bottle of soy mlik from the fridge and start pouring into my mouth. 
+               It is always good to get a nice bottle of soy milk everyday. Then I grab some breads from the counter. I am still unable to appreciate the texture of this food, but surely it is providing
+                efficient enery to keep me running."]
+                
+image = "https://cdn.glitch.me/7200b7bc-64ac-41b1-af90-81f45e8612f9%2FKagamiFoodFinal.jpg?v=1638769034854"
+                
+choices = ["Rest"]
+targets = ["rest"]
+
+
+
+[storylets.rest]
+name = "Rest"
+description = ["I take off my clothes and quickly crawl into my warm bed rolls. It is very cold outside."]
+
+choices = ["Go to bed"]
+targets = ["sleep"]
+
+
+dependentChoices = ["Listen to music"]
+dependentTargets = ["music"]
+dependency = ["dinner"]
+
+
+[storylets.music]
+name = "Listen to music"
+description = ["I put on my headphone and start humming the usual song. I don't know what song it is, in fact, I am not able to 
+                find anything close to this song in the web. The melody sounds so familiar, and the tuning of the piano sounds a little
+                sharp, but delicate at the same time. I can only imagine how the pianist moves his or her wrists and fingers with
+                precisions and quickness, all at once. Oh by the way, the headphone is not plugged in to anything, but it gives me
+                a sense of comfort somehow. Weird."]
+music = "https://cdn.glitch.me/7200b7bc-64ac-41b1-af90-81f45e8612f9%2Fnicepiano.mp3?v=1638608330280"
+volume = 0.3
+image = "https://cdn.glitch.me/7200b7bc-64ac-41b1-af90-81f45e8612f9%2FKagamiHeadphoneFinal.jpg?v=1638768976403"
+choices = ["Go to bed"]
+targets = ["sleep"]
+
+
+
+[storylets.sleep]
+name = "Go to bed"
+description = ["As I am humming the same tune in my bed, my voice goes lower and lower, softer and softer, as if it is calming myself and putting me
+                into a sweet dream in the midst of The Sleepless City."]
+
+muted = true
+choices = ["Into the dream"]
+targets = ["dream"]
+
+
+
+[storylets.dream]
+name = "Into the dream"
+description = ["Off we go, into the dream. Everyday I keep having this same dream, waking up in the middle of nowhere, in a world full of
+                peace and silence. Unlike the real world where the streets are filled with neon lights and noisy tunes, this world only has
+                simplicity. The colors are white and grey. There is no sound at all."]
+
+
+choices = ["As if it is a post-apocalyptic world"]
+targets = ["apoc"]
+music = "https://cdn.glitch.me/7200b7bc-64ac-41b1-af90-81f45e8612f9%2Fdream.mp3?v=1638607060824"
+volume = 0.1
+
+background = "https://cdn.glitch.me/7200b7bc-64ac-41b1-af90-81f45e8612f9%2FMIRROR_BACKGROUND.png?v=1638758066294"
+dependentChoices = ["Like an old performaning stage"]
+dependentTargets = ["stage"]
+dependency = ["music"]
+
+
+
+[storylets.apoc]
+name = "As if it is a post-apocalyptic world"
+description = ["Yes, a post-apocalyptic world, like those fictional worlds where Artificial Intelligence took over the world, and only a few
+                remains on the Earth, confused about their identities. Or maybe a world that suffered from a bio-chemical spills, or even
+                attack, and humans are struggling against mutated creatures.", "Well, if comparing this world to those well crafted fictional
+                worlds, this world seems incomplete. There are fractures of something floating everywhere, it builds up a somewhat nice
+                atmosphere, but scary at the same time. The fractures are almost like broken glasses, beautiful when it is complete,
+                dangerous when pointing the razor-sharp edge toward at others. That is why this dream always amazes me even after all these times.
+                Sometimes I get a sense that perhaps I belong here."]
+
+
+choices = ["Wake up"]
+targets = ["endingA"]
+
+
+
+
+[storylets.stage]
+name = "Like an old performaning stage"
+description = ["Although this place is full of broken parts, like shattered glass floating all over, whenever I start singing here, it just
+                feels magical. The echoes are harmonizing with my own voice, perhaps those fractures of glass is reflecting the voice.
+                So maybe those are not glasses at all? Mirrors, maybe? "]
+
+choices = ["Sing my tune"]
+targets = ["sing"]
+
+
+
+[storylets.sing]
+name = "Sing my tune"
+description = ["I start singing the usual tune. This time, however, feels a little different. Usually the echoes are just my own voice,
+                but I am hearing some unusual sound reflecting off the broken pieces now, something sharp, but not uneasy to listen to.
+                In fact, I am enjoying the new addition of the sounds, as if I am accompanied by an instrument. On another note, the
+                instrument sounds familiar, but I just can't recall the name of it... Something delicate, something that I am always
+                searching for."]
+
+choices = ["Dive deeper", "Wake up"]
+targets = ["dive", "endingA"]
+
+[storylets.dive]
+name = "Dive deeper"
+description = ["I have never explored much further in this world, because to be honest there is nothing to explore. But as my voice is bouncing
+                off the objects and forming a nice harmony, I am completely drawn into it. The way the sound is bouncing back toward me is
+                as if guiding me through a vast wasteland. Although there is no road sign in this world, my voice is guiding me toward a
+                direction. I can sense that something is waiting for me just ahead."]
+                
+                
+choices = ["Follow the voice"]
+targets = ["mirror"]
+
+
+[storylets.mirror]
+name = "Into the mirror"
+description = ["I follow the voice that is guiding me(my voice?). After a short while, not too far away, a broken fracture drops on the
+                path. Usually the fractures just float around, and usually well out of my reach. The way it drops is as if asking for my attention. I walk forward and try to pick it up. I
+                need to be extremely careful, as the fracture is very sharp and it might hurt me. I pick up the fracture, it shows someone
+                in there, but who might that be?"]
+                
+choices = ["Time's up"]
+targets = ["endingB"]
+
+[storylets.endingA]
+name = "Wake up"
+description = ["With that being said, I do wish to stay here a little longer. But as my past experience suggests, the nap time is almost
+                over. I close my eyes, and try to grasp the last feel of this world, and slowly open my eyes again. There it is, the weird
+                sound whenever I exit the dream ---- \"Goodbye, (...inaudible sound)\".", "The sun has risen, now I need to prepare myself
+                for another routine day of high school. Speaking of which, there was a new transfer student in my class this term. She
+                looks pretty cute but at the same time feels a little pretentious, it could be my false sense though, I am never too good
+                at judging people. Anyway, I should get up and get dressed in front of the mirror. Today, again, the mirror is just a blank
+                grey object, not the way a mirror is supposed to do from what I learnt."]
+
+image = "https://cdn.glitch.me/7200b7bc-64ac-41b1-af90-81f45e8612f9%2FMirrorFinal.jpg?v=1638768950963"
+choices = ["The End"]
+targets = ["credit"]
+
+
+
+
+
+[storylets.endingB]
+name = "Back to the real world"
+description = ["As I am staring closer into the fracture, the person inside is just calmly staring me back. The person in there is a 
+                girl, quite pretty actually, with twin ponytails just like me. I want to ask her about this world, but just before I do,
+                she speaks first. \"Welcome to the Mirror.\" And then she just disappears.", "At the same moment, I feel a power that is
+                dragging myself out of that world, and all the sudden the sight in front of me is the ceiling of my flat."]
+
+music = "https://cdn.glitch.me/7200b7bc-64ac-41b1-af90-81f45e8612f9%2FECHO.mp3?v=1638609769574"
+volume = 0.1
+choices = ["Get up"]
+targets = ["reflection"]
+
+[storylets.reflection]
+name = "Mirror reflection"
+description = ["The sun has already risen, and I am running late for school. But what was that? As I am dressing up for school I keep thinking
+                that. I go in front of the mirror before I head out, I quickly give it a glance and expecting nothing. But she is there, 
+                staring at me like the way she stares in the dream."]
+image = "https://cdn.glitch.me/7200b7bc-64ac-41b1-af90-81f45e8612f9%2FKagamiMirrorFinal.jpg?v=1638768961956"
+choices = ["The End"]
+targets = ["credit"]
+
+
+[storylets.credit]
+name = "Credit"
+description = ["Story: Ryan Cai", "Art: huahua", "Music: Music Generator GA(Ryan Cai, Matthew Fritsch, Edwin Wang, Adam Carter)", "Engine: Adam Smith, Ryan Cai", "Thanks for playing!"]
+
+endImage = "https://cdn.glitch.me/7200b7bc-64ac-41b1-af90-81f45e8612f9%2FKagamiThanks.jpg?v=1638770503903"
+choices = []
+targets = []
+endstate = "true"
